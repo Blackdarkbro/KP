@@ -1,0 +1,106 @@
+body { 
+	display: grid;
+	grid: "header header  " 130px
+          "menu   menu    " 65px
+          "nav    section "  1fr
+          "footer footer  " 100px
+		  / 1fr   5fr ;
+		  
+  	min-height: 100vh;
+}
+
+header  { grid-area: header; }
+div.head-menu {grid-area: menu; }
+nav     { grid-area: nav;     }
+section { grid-area: section; }
+footer  { grid-area: footer;  }
+
+
+
+/* Styles */
+body{ margin:0; font-family:Monserrat, sans-serif; background: url(images/white-brick-small.jpg) }
+
+body > *{ padding:1em;}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav:    { margin-left: 5px; }
+section { background:url(rotate.jpg) #b7d7e8; }
+footer  { background: #000000; }
+
+.item{
+    margin: 0;
+    border-radius:3px; 
+	background:#d4c5d9;
+	display:flex; justify-content:center; align-items:flex-start;
+    align-content: flex-start;
+}
+.bold{
+    font-weight: bold;
+}
+
+/*  Navigation  */
+
+.list{
+    padding:0;
+    list-style: none;
+}
+.list li{
+    padding:6px;
+    background: rgba(154, 159, 173, 0.19);
+    margin-bottom: 4px;
+   // box-shadow: 0.5px 0.5px 1px
+}
+.list li:before {
+    padding-right:10px;
+    font-weight: bold;
+    color: #C0C0C0;
+    content: "\2714";
+    transition-duration: 0.5s;
+}
+.list li:hover:before {
+    color: #337AB7;
+    content: "\2714";
+} 
+.list li:hover{
+    background: rgba(140, 162, 224, 0.28);
+}
+.list li a{
+    text-decoration: none;
+    color: black;
+}
+
+/*    Styles for Section*/
+
+    section{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1.5em;
+        grid-auto-rows: minmax(100px, auto);
+    }
+.into{
+    background: #86adf7;
+}
+
+
+
+
+/*               Media              */
+@media screen and (max-width: 750px){
+    section{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    nav{
+        display: none;
+    }
+    
+    
+    
+}
+@media screen and (max-width: 980px){
+    
+}
