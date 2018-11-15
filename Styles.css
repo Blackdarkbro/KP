@@ -1,8 +1,8 @@
 body { 
 	display: grid;
-	grid: "header header  " 130px
-          "menu   menu    " 65px
-          "nav    section "  1fr
+	grid: "header header  " 117px
+          "menu   menu    " 40px
+          "nav    section " 1fr
           "footer footer  " 100px
 		  / 1fr   5fr ;
 		  
@@ -21,14 +21,15 @@ footer  { grid-area: footer;  }
 
 body{ margin:0; font-family:Monserrat, sans-serif; background: url(images/white-brick-small.jpg) }
 
-body > *{ padding:1em;}
+body > *{ padding: 1em;}
+
 a{
     text-decoration: none;
     color: black;
 }
 
 nav:    { margin-left: 5px; }
-section { background: ; }
+section { margin-top : 16px;}
 footer  { background: #000000; }
 
 .bold{
@@ -41,7 +42,7 @@ footer  { background: #000000; }
 
         .head{
             display: grid;
-            grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+            grid-template-columns: 240px 1fr 1fr 1fr 1fr;
             grid-gap: 1em;
             place-items: stretch;
             max-height: 200px;
@@ -86,7 +87,7 @@ footer  { background: #000000; }
             margin-top: 20px;
         }
         .head-time{
-            min-width: 125px;
+            min-width: 145px;
             max-height: 110px;
             box-shadow:  3px 3px 4px 2px grey;
         }
@@ -94,7 +95,7 @@ footer  { background: #000000; }
             margin-left: 20px;
         }
         .head-address{
-            min-width: 150px;
+            min-width: 105px;
             max-height: 110px;
             padding-left: 25px;
             box-shadow:  3px 3px 4px 2px grey;
@@ -107,34 +108,30 @@ footer  { background: #000000; }
 
 
                 /*    Menu      */
+.head-menu{
+display: flex;
+/*            background: #f0d335; */ 
+height: 100%;
+}
+.head-menu div{
+    display: flex;
+    background: black;
+    color: white;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+}
+.head-menu div a{
+    color: white;
+}
+.head-menu div:hover{
+    background: #f0d335;
+    color: black;
+}
 
-
-        .head-menu{
-            display: flex;
-            justify-content: center;
-            height:25px;
-/*            background: #f0d335;*/
-        }
-        .head-menu ul{
-            margin: 0 auto;
-            list-style-type: none;
-            background: gree;
-            
-        }
-        .head-menu ul li{
-            display: inline;
-            padding: 6px;
-            margin-left: 6px;
-            background: yello;
-        }
-        .head-menu ul li:hover{
-            background:rgba(140, 162, 224, 0.28);
-            color: red;
-
-        }
-        
 
             /*  Navigation  */
+
 
 .list{
     padding:0;
@@ -180,7 +177,7 @@ section{
 
         /*   Footer   */
 footer{
-    color:white;
+    color: white;
 }
 
 
@@ -188,24 +185,24 @@ footer{
 
 
  @media screen and (max-width: 545px){
-            .head{
-                grid-template-columns: 250px;
-                justify-content: center;
-            }
+             .head-logo{
+               grid-column: 1/5;
+                 place-self: center;
+             }
             .head-basket{
                display: none;;
             }
+     section{
+        
+     }
         }
 @media screen and (max-width: 670px){
-            .head-phone, .head-time, .head-address{
+            .head-time{
                 display: none;
             }
-            .head{
-                grid-template-columns: 250px 1fr;
-            }
-            .head-basket{
-                border:none;
-            }
+    .head-basket{
+        grid-column: 2/5;
+    }
         }
 
 @media screen and (max-width: 750px){
@@ -214,11 +211,11 @@ footer{
                 grid-template-rows: repeat(3, 1fr);
             }
            
-            nav, .head-phone, .head-address{
+            nav{
                 display: none;
             }
             .head{
-                grid-template-columns: 250px 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
             }
             body { 
 	            grid: "header  " 120px
@@ -228,8 +225,8 @@ footer{
 		        / 1fr;
             }
     }
- @media screen and (max-width: 890px){
-             .head-phone, .head-address{
+ @media screen and (max-width: 840px){
+              .head-address{
                 display: none;
             }
             .head{
@@ -242,7 +239,7 @@ footer{
                 display: none;
             }
             .head{
-                grid-template-columns: 250px 1fr 1fr 1fr;
+               grid-template-columns: 250px 1fr 1fr 1fr;
             }
         }
 @media screen and (max-width: 1233px){
