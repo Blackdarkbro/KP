@@ -4,7 +4,7 @@
           "menu   menu    " 40px
           "nav    section " 1fr
           "footer footer  " 120px
-		  / 1fr   6fr ;
+		  / 1.4fr   6fr ;
     box-shadow: 1px 0px 20px 1px grey;
 }
 body{
@@ -30,7 +30,7 @@ a{ text-decoration: none;  color: black;}
 ul{list-style: none;}
 
 header {height: 80px; }
-nav   { margin-left: 5px; margin-top: 31px; padding-top: 0;}
+nav   { margin-left: 5px; margin-top: 15px; padding-top: 0;}
 section { margin-top :15px;}
 footer  { background: #000000; }
 
@@ -48,6 +48,8 @@ footer  { background: #000000; }
             grid-template-rows: 80px;
             grid-gap: 1em;
             place-items: stretch;
+            padding: 0;
+            margin-top: 10px
         }
          .head-logo{
             background: url(icons/Logotype.png) no-repeat right ;
@@ -71,7 +73,6 @@ footer  { background: #000000; }
             min-width: 230px;
             max-width: 270px;
             max-height: 110px;
-/*            box-shadow:  3px 3px 4px 2px grey;*/
         }
         .head-basket .cart{
             text-align: left;
@@ -116,21 +117,75 @@ footer  { background: #000000; }
                 /*    Menu      */
 .head-menu{
 display: flex;
-/*            background: #f0d335;  */
-height: 100%;
+background: #f0d335;  
+align-items: stretch;
+justify-content: center;
+height: 80%;
+padding: 0;
+margin-top: 10px;
 }
 .head-menu div{
-    display: flex;
-    background: #f0d335;
-    width: 25%;
+    display:flex;
+    margin: 0;
+    width: 15%;
     align-items: center;
     justify-content: center;
     font-size: 1.1em;
 }
 .head-menu div:hover{
     background: black;
-    color: #f0d335;
     transition-duration: 0.3s;
+}
+.head-menu div:hover a{
+    color: #f0d335;
+}
+
+/* Перенос навигации в меню */
+
+/* Блок в меню */
+div.head-submenu{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 6px;
+}
+.head-menu-list{
+    padding: 0;
+    margin: 0;
+    margin-top: 6px;
+}
+li.current{
+    display: none;
+}
+.list-sub{
+    background: rgba(0, 0, 0, 0.81);
+    width: 270px;
+    position:relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+}
+.list-sub li{
+    padding: 10px;
+    border-bottom: 1px #f0d335 solid;
+    width: 93%;
+}
+.list-sub li:hover{
+    background: #f0d335;
+}
+.list-sub li:hover a{
+    color: black;
+    font-weight: 500;
+}
+.list-sub li a{
+    color: #f0d335;
+}
+/* Вывод списка */
+div.head-submenu:hover li.current{
+    display: flex;
 }
 
 
@@ -145,14 +200,13 @@ height: 100%;
 .list > li{
     padding:7px;
     height: 100%!important;
-      border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 .list > li > a{
   display: inline-block;
   width: 100%;
   padding: 8px;
   font-size: .9em;
-/*  text-transform: uppercase;*/
   letter-spacing: .6px;
   color: #000;
   transition: .2s linear;
@@ -201,6 +255,8 @@ section{
         grid-row-gap: 20px;
         justify-content: center;
     }
+
+/*Карточки товаров*/
 .product{
     display: flex;
     flex-direction: column;
@@ -279,7 +335,7 @@ footer span:hover{
 footer .author{
     display: flex;
     flex-direction: column;
-/*    background: purple;*/
+    justify-content: center;
 }
 footer .author span + span{
     font-size: 13px;
@@ -313,59 +369,36 @@ footer .contact address i::selection{
 
 /*               Media requesets             */
 
+/*    Экран идёт от большего к малому т.к. неправильно перекрываются стили*/
 
- @media screen and (max-width: 415px){
-             .head-logo{
-                 grid-column: 1/6;
-                 background-position: center;
-                 height: 120px;
-             }
-            .head-basket, .head-phone, .head-address, .head-time{
-               display: none;;
-            }
-        }
-@media screen and (max-width: 500px){
-        }
-@media screen and (max-width: 670px){
-            .head-time{
+@media screen and (max-width: 1300px){
+             .head-phone{
                 display: none;
             }
-    .head-basket{
-        grid-column: 2/6;
-        align-items: center;
-        justify-content: center;
-/*        box-shadow: 6px 5px 3px 4px grey;*/
+/*    Убираются номера телефонов */
+    .head-logo{
+        background-position: center;
     }
+            .head{
+               grid-template-columns: 150px 1fr 1fr 1fr;
+            }
         }
 
-@media screen and (max-width: 910px){
-            nav{
-                display: none;
-            }
-            .head{
-                grid-template-columns: 1fr 1fr;
-            }
-            body { 
-	            grid: "header  " 120px
-                "menu    " 65px
-                "section "  1fr
-                "footer  " 100px
-		        / 1fr;
-            }
+/*  Убирается фон body */
+@media screen and (max-width: 1100px){
+    body{
+        margin: 0;
     }
- @media screen and (max-width: 840px){
-              .head-address{
-                display: none;
-            }
-            .head{
-                grid-template-columns: 150px 1fr;
-            }
-        }
-       
+}
+
+/* Две колонки на товарах и выравнивается футер */
 @media screen and (max-width: 950px){
     section{
         grid-template-columns: repeat(2, minmax(200px, 1fr));
         grid-template-rows: repeat(3, minmax(400px, 1fr));
+    }
+    section div.slider{
+        grid-column: 1/3;
     }
     footer{
         flex-direction: column;
@@ -378,22 +411,80 @@ footer .contact address i::selection{
     }
         }
 
-@media screen and (max-width: 1100px){
-    body{
-        margin: 0;
-    }
-}
-       
-@media screen and (max-width: 1300px){
-             .head-phone{
+ @media screen and (max-width: 840px){
+              .head-address{
                 display: none;
             }
-    .head-logo{
-        background-position: center;
-    }
             .head{
-               grid-template-columns: 150px 1fr 1fr 1fr;
+                grid-template-columns: 150px 1fr 1fr;
             }
         }
 
- 
+/*  Блок навигации убирается и переносится на панель меню*/
+@media screen and (max-width: 700px){
+            nav{
+                display: none;
+            }
+                .wrapper { 
+	            grid: "header  " 80px
+                "menu    " 40px
+                "section "  1fr
+                "footer  " 100px
+		        / 1fr;
+            }
+    .head-menu{
+        justify-content: space-around;
+    }
+    div.head-submenu{
+        display: flex;
+    }
+    .point:nth-child(1){
+        display: none;
+    }
+    
+}
+
+/* Убираются адреса*/
+@media screen and (max-width: 580px){
+            .head-time{
+                display: none;
+            }
+    .head{
+        grid-template-columns: 150px 1fr;
+    }
+    .head-basket{
+        align-items: center;
+        justify-content: center;
+    }
+    .slider{
+    display: none;
+}
+    section{
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-rows:  repeat(3, minmax(400px, 1fr));
+    }
+        }
+
+
+/* Выстраирование под мобилки в одну колнку*/
+@media screen and (max-width: 520px){
+    section{
+        grid-template-columns: 0.8fr;
+        grid-template-rows: repeat(6, 400px)
+    }
+}
+
+/* Шапка для маленьких разрешений жкранов */
+ @media screen and (max-width: 415px){
+     .head{
+         grid-template-columns: 1fr;
+         align-items: center;
+     }
+             .head-logo{
+                 background-position: center;
+                 height: 120px;
+             }
+            .head-basket, .head-phone, .head-address, .head-time{
+               display: none;;
+            }
+        }

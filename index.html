@@ -7,11 +7,23 @@
 <!--    Font-awesome-->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 <!--    Main styles-->
+   <link rel="stylesheet" href="indexStyle.css">
     <link rel="stylesheet" href="Styles.css">
 <!--    JQuery-->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+<!--     Links to the libraries bxslider-->
+<!--
+<link rel="stylesheet" href="bxslider-4-4.2.12/src/css/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="bxslider-4-4.2.12/docs_src/assets/vendors/jquery.min.js"></script>
+-->
+<!--       links to CDN bxslider-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-    <title>BuildPRO</title>
+    <title>Строительный магазин BuildPRO</title>
 </head>
     <body>
        <div class="wrapper">
@@ -26,7 +38,7 @@
             <div class="head-time">
                          <img src="icons/clock.png" alt="clock" width="50">
                      <div>
-                        <span>Ежедневно</span>
+                        <span class="bold">Ежедневно</span>
                         <span>С 8:00 до 23:00</span>
                     </div>
             </div>
@@ -52,10 +64,30 @@
             </div>
             </header>
             <div class="head-menu">
-                <div>О нас</div>
-                <div>Меню</div>
-                <div>Аккаунт</div>
-                <div>Акции</div>
+                <div class="point"><a href="pages/aboutUs.html">О нас</a></div>                
+                <div class="point"><a href="pages/account.html">Аккаунт</a></div>
+                <div class="head-submenu">
+                <a href="">Меню</a>
+                    <ul class="head-menu-list">
+                        <li class="current">           
+                           <ul class="list-sub">
+                                <li><a href="pages/Shtukaturka.html" title="Штукатурка">Штукатурка</a></li>
+                                <li><a href="pages/kraski.html" title="Краски">Краски</a></li>
+                                <li><a href="pages/kirpichi.html" title="Кирпичи">Кирпичи</a></li>
+                                <li><a href="pages/gazobloki.html" title="Газоблоки">Газоблоки</a></li>
+                                <li><a href="pages/keramzit.html" title="Керамзит">Керамзит</a></li>
+                                <li><a href="pages/gazosilikat.html" title="Газосиликат">Газосиликат</a></li>
+                                <li><a href="pages/lampochki.html" title="Лампочки">Лампочки</a></li>
+                                <li><a href="pages/rozetki.html" title="Розетки">Розетки</a></li>
+                                <li><a href="pages/" title="Лопаты">Лопаты</a></li>
+                                <li><a href="pages/molotki.html" title="Молотки">Молотки</a></li>
+                                <li><a href="pages/Steklopaket.html" title="Стеклопакеты">Стеклопакеты</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="point"><a href="index.html">Акции</a></div>
+                
             </div> 
             <nav>
                 <ul class="list">
@@ -73,20 +105,20 @@
                     </li>
                     <li><a href="" class="dropdown">Теплоизоляция</a>
                      <ul class="submenu-standart">
-                            <li><a class="submenu" href="" title="Керамзит">Керамзит</a></li>
-                            <li><a class="submenu" href="" title="Газосиликат">Газосиликат</a></li>
+                            <li><a class="submenu" href="pages/keramzit.html" title="Керамзит">Керамзит</a></li>
+                            <li><a class="submenu" href="pages/gazosilikat.html" title="Газосиликат">Газосиликат</a></li>
                         </ul>
                     </li>
                     <li><a href="" class="dropdown">Электрика</a>
                      <ul class="submenu-standart">
-                            <li><a class="submenu" href="" title="Лампочки">Лампочки</a></li>
-                            <li><a class="submenu" href="" title="Розетки">Розетки</a></li>
+                            <li><a class="submenu" href="pages/lampochki.html" title="Лампочки">Лампочки</a></li>
+                            <li><a class="submenu" href="pages/rozetki.html" title="Розетки">Розетки</a></li>
                         </ul>
                     </li>
                     <li><a href="" class="dropdown">Инструмент</a>
                      <ul class="submenu-standart">
-                            <li><a class="submenu" href="" title="Лопаты">Лопаты</a></li>
-                            <li><a class="submenu" href="" title="Молотки">Молотки</a></li>
+                            <li><a class="submenu" href="pages/" title="Лопаты">Лопаты</a></li>
+                            <li><a class="submenu" href="pages/molotki.html" title="Молотки">Молотки</a></li>
                         </ul>
                     </li>
                     <li><a href="" class="dropdown">Окна</a>
@@ -97,8 +129,33 @@
                 </ul>
             </nav>
             <section>
+              <div class="slider">
+                  <div class="bxSlider">
+                    <div class="skidki">
+                        <div class="box1">
+                        <h4>Новая коллекция</h4>
+                        <div id="black">Успейте предзаказать новую коллекцию</div>
+                        </div>
+                    </div>
+                    <div class="news">
+                       <div class=box1>
+                             <h4>С Новым Годом</h4>
+                            <div id="black">Администрация магазина поздравляет вас с Новым Годом</div>
+                        </div>
+                    </div>
+                    <div class="sklad">
+                       <div class=box1>
+                            <h4>Новое поступление красок</h4>
+                            <div id="black">Покупайте новейшие краски из Швеции</div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+                <div class="topic">
+                  <h2>Самые горячие цены</h2>
+                </div>
                <div class="product">
-                  <div class="image"><img src="images/Phone1.jpg" alt=""></div>
+                  <div class="image"><span>Скидка</span><img src="images/Phone1.jpg" alt=""></div>
                    <div class="info">
                          <span>Лопата совковая 45х150</span>
                        <span>Чёрный цвет</span>
@@ -107,50 +164,59 @@
                    </div>
                </div>
                <div class="product">
-                   <div class="image"><img src="images/Phone1.jpg" alt="Лопата"></div>
+                   <div class="image"><span>Скидка</span><img src="images/Phone1.jpg" alt="Лопата"></div>
                    <div class="info">
                        <span>Лопата совковая 45х150</span>
                        <span>Чёрный цвет</span>
-                       <span>Цена: 50р.</span>
+                       <span><b>Цена: 50р.</b></span>
                        <button>Купить</button>
                    </div>
                </div>
                <div class="product">
-                    <div class="image"><img src="images/Phone1.jpg" alt="Лопата"></div>
+                    <div class="image"><span>Скидка</span><img src="images/Phone1.jpg" alt="Лопата"></div>
                    <div class="info">
                        <span>Лопата совковая 45х150</span>
                        <span>Чёрный цвет</span>
-                       <span>Цена: 50р.</span>
+                       <span><b>Цена: 50р.</b></span>
                        <button>Купить</button>
-                   </div>
+                   </div>                   
                </div>
                <div class="product">
-                   <div class="image"><img src="images/Phone1.jpg" alt="Лопата"></div>
+                    <div class="image"><span>Скидка</span><img src="images/Phone1.jpg" alt="Лопата"></div>
                    <div class="info">
                        <span>Лопата совковая 45х150</span>
                        <span>Чёрный цвет</span>
-                       <span>Цена: 50р.</span>
+                       <span><b>Цена: 50р.</b></span>
                        <button>Купить</button>
-                   </div>
+                   </div>                   
                </div>
                <div class="product">
-                   <div class="image"><img src="images/Phone1.jpg" alt="Лопата"></div>
+                    <div class="image"><span>Скидка</span><img src="images/Phone1.jpg" alt="Лопата"></div>
                    <div class="info">
                        <span>Лопата совковая 45х150</span>
                        <span>Чёрный цвет</span>
-                       <span>Цена: 50р.</span>
+                       <span><b>Цена: 50р.</b></span>
                        <button>Купить</button>
-                   </div>
+                   </div>                   
                </div>
                <div class="product">
-                   <div class="image"><img src="images/Phone1.jpg" alt="Лопата"></div>
+                    <div class="image"><span>Скидка</span><img src="images/Phone1.jpg" alt="Лопата"></div>
                    <div class="info">
                        <span>Лопата совковая 45х150</span>
                        <span>Чёрный цвет</span>
-                       <span>Цена: 50р.</span>
+                       <span><b>Цена: 50р.</b></span>
                        <button>Купить</button>
-                   </div>
+                   </div>                   
                </div>
+               
+<div class="aboutUs">
+    <h2>Добро пожаловать в наш интернет-магазин строительных материалов!</h2>
+    <div>
+        <p>Процесс покупки стройматериалов перестал быть чем-то обременительным и утомительным. Вам больше не нужно ездить по городу в поисках нужного материала, низких цен, думать о доставке и разгрузке. Практически все, что нужно для <em>ремонта</em> и <em>отделочных работ</em> есть на страницах нашего сайта. Вот уже более 10 лет мы работаем в сфере продажи <em>строительных материалов</em>. За это время налажены прямые поставки с заводов-производителей, что позволяет с уверенностью заявить - у нас одни из самых низких цен на <strong>строительные материалы в Республике Беларусь</strong>. Вам остается лишь удобно расположиться и наслаждаться выбором, читая подробное описание каждой категории товаров. Доставку и разгрузку также можно оформить в корзине, стоимость рассчитается сайтом автоматически.</p>        
+        <p>Цены на сайте всегда актуальны. И склад, и магазин <strong>строительных материалов</strong> находятся в одном месте и работают без выходных.</p>
+        <p>Весь наш коллектив не понаслышке связан со строительством &#45; до запуска склада-магазина мы занимались строительными и отделочными работами, что позволяет давать грамотные консультации.</p>
+    </div>
+</div>
             </section>
             <footer>
                 <div class="author">
@@ -170,15 +236,7 @@
                     <address><i class="fa fa-envelope" aria-hidden="true"> Egorsavchik98&#64;mail&#46;ru</i></address>
                 </div>
             </footer>
-        </div>
-        <script>
-            var logo = document.getElementsByClassName('head-logo')[0];
-            $('.head-logo').click(function(){
-                window.location = "index.html"
-            })
-            $('.head-logo').hover(function(){
-                logo.style.cursor = "pointer";
-            })
-        </script>
+        </div>    
+        <script src="mainJS.js"></script>
     </body>
 </html>

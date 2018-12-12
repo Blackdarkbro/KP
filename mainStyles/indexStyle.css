@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Arimo|Lora|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+/* Слайдер  */
+section div.slider{
+    grid-column: 1/4;
+}
+.skidki{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(living-room-3539587_1280.jpg);
+    height: 400px;
+}
+.news{
+    background: url(background-2997386_1920.jpg);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.sklad{
+    background: url(kraski.jpg);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.box1{
+    display: flex;
+    flex-direction: column;
+    background: rgba(240, 211, 53, 0.5);
+    color: #fff7f7;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 450px;
+    font-size: 2em;
+    font-family:;
+    transition: .6s;
+    margin-bottom: 40px;
+}
+#black{
+    display: none;
+    opacity: 0;
+    transition: .6s;
+    font-size: .6em;
+}
+.box1:hover{
+    width: 600px;
+    height: 200px;
+    justify-content: flex-start;
+    padding: 15px;
+    background: rgba(239, 212, 70, 0.87); 
+    color: black;
+}
+.box1:hover h4{
+    border-bottom: 5px black solid;
+    padding-bottom: 30px;
+    transition: .6s;
+}
+.box1:hover #black{
+    display: block;
+    opacity: 1;
+}
+
+
+section .topic{
+    color: #000000;
+    grid-column: 1/4;
+}
+.wrapper section{
+    grid-template-rows: 400px 50px 400px 400px 1fr;
+}
+.image span{
+    color: red;
+    font-size: 1.2em;
+    position: relative;
+    z-index: 1;
+    border: 2px red solid;
+    padding: 3px 5px 3px 5px;
+    top: 20px;
+    left: 20px;
+    font-family: 'Lora', sans-serif;  
+    transition: .3s;
+}
+.image span:hover{
+    background: red;
+    color: white;
+    cursor:default;
+}
+.aboutUs{
+    grid-column: 1/4;
+        font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.2em;
+    color: #3e3e3e;
+}
+
+
+
+@media screen and (max-width: 950px){
+    slider{
+    grid-column: 1/3;
+}
+    .aboutUs{
+    grid-column: 1/3;
+    }
+    .topic{
+    grid-column: 1/3;
+    }
+.wrapper section{
+    grid-template-rows: 400px 50px 400px 400px 400px 1fr;
+}
+}
+
+@media screen and (max-width: 400px){
+    slider{
+    display: none;
+}
+    .aboutUs{
+        display: none;
+    }
+    .topic{
+        display: none;
+    }
+
+.wrapper section{
+    grid-template-rows: repeat(6, 300px);
+    grid-template-columns: 1;
+}
+}
+
+
+
+
+/*               Media requesets             */
+
+
+/*    Экран идёт от большего к малому т.к. неправильно перекрываются стили*/
+
