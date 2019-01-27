@@ -1,0 +1,31 @@
+<?xml version="1.0"  encoding="UTF-8" ?>
+<product>
+            <name>Лопата совковая</name>
+            <characteristic>Снегоуборочная</characteristic>
+            <price> 45р.</price>
+            
+            <name>Набор лопат</name>
+            <characteristic>5 шт.</characteristic>
+            <price> 135р.</price>
+            
+            <name>Супер лопата</name>
+            <characteristic>Для мужчин</characteristic>
+            <price> Бесценно</price>
+            
+            <name>Лопата</name>
+            <characteristic>45х50</characteristic>
+            <price> 25р.</price>
+            
+            <name>Лопата мелкая</name>
+            <characteristic>25х40</characteristic>
+            <price> 15р.</price>
+            
+            <name>Лопата Универсальная</name>
+            <characteristic>45х50</characteristic>
+            <price> 35р.</price>
+            
+            
+</product>
+
+
+
